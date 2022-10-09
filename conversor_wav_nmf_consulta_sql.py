@@ -852,7 +852,7 @@ class Ui_Serial(object):
                         #        print(f'{arq_conjunto}{arq_ext}')
                         new_name = (f'{arq_conjunto}{arq_ext}')
                         os.rename(arq, new_name)
-#                self.lcdNumber.display(contador)
+                        
             #  Convertendo toda PASTA com NMF para wav/mp3
             elif self.radioButton_9.isChecked():
                 try:
@@ -903,7 +903,7 @@ class Ui_Serial(object):
                                 arq_conjunto, arq_wav = arq_name.split('.wav')
                                 new_name = (f'{arq_conjunto}{arq_ext}')
                                 os.rename(arq, new_name)
-#                self.lcdNumber.display(contador_geral)
+
             #  Convertendo audios NMF dentro de SUBPASTAS
             elif self.radioButton_9.isChecked():
                 try:
@@ -953,7 +953,6 @@ class Ui_Serial(object):
                 lista_arquivos_para_manipular.append(file)
         caminho_destino = (str(self.origem_3.text()))
         cont = 0
-#        os.chdir(caminho_destino)
         lista_ja_copiados = []
         for arq in os.listdir():
             if self.radioButton_6.isChecked():
@@ -1043,7 +1042,6 @@ class Ui_Serial(object):
         banco_mes = str(self.comboBox.currentText())  # verifi
         banco_ano = str(self.comboBox_2.currentText())  # ano
         cidade = str(self.comboBox_3.currentText())
-#        como_vai_ser = self.plainTextEdit.currentCharFormat()
         self.texto = self.plainTextEdit
         varia = self.plainTextEdit
         minha_lista = self.texto.toPlainText().splitlines()
@@ -1063,10 +1061,6 @@ class Ui_Serial(object):
         mes_e_ano = banco_mes + '-' + banco_ano
         print(mes_e_ano)
         tabela = pd.read_excel("TABELA_DADOS.xlsx")
-#        consultando_id = tuple((tabela.loc[tabela['Mes-e-ano']=='BancoUm', mes_e_ano]))
-#        print(consultando_id)
-#        consultando_id_numero = str(consultando_id[0])
-#        print(consultando_id_numero)
         consultando_id2 = tuple((tabela.loc[tabela['Mes-e-ano'] == cidade, mes_e_ano]))
         consultando_id_numero2 = str(consultando_id2[0])
         consultando_id_numero2 = str(consultando_id2[0])
