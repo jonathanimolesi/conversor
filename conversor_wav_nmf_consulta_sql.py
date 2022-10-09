@@ -41,7 +41,6 @@ class Ui_Serial(object):
         self.label_7.setObjectName("label_7")
         self.label_17 = QtWidgets.QLabel(self.centralwidget)
         self.label_17.setGeometry(QtCore.QRect(130, 570, 91, 31))
-        self.label_17.setStyleSheet("image: url(:/logos_pasta/logotipo.png);")
         self.label_17.setText("")
         self.label_17.setObjectName("label_17")
         self.textBrowser_3 = QtWidgets.QTextBrowser(self.centralwidget)
@@ -726,7 +725,7 @@ class Ui_Serial(object):
 
     def retranslateUi(self, Serial):
         _translate = QtCore.QCoreApplication.translate
-        Serial.setWindowTitle(_translate("Serial", "Backup & Restore Conversor"))
+        Serial.setWindowTitle(_translate("Serial", "Conversor"))
         self.botao_sair.setText(_translate("Serial", "Sair"))
         self.label_3.setText(_translate("Serial", "<html><head/><body><p><span style=\" font-size:11pt; font-weight:700;\"></span></p></body></html>"))
         self.label_7.setText(_translate("Serial", "<html><head/><body><p><span style=\" font-weight:700; color:#aa0000;\"></span></p></body></html>"))
@@ -1046,18 +1045,9 @@ class Ui_Serial(object):
         cidade = str(self.comboBox_3.currentText())
 #        como_vai_ser = self.plainTextEdit.currentCharFormat()
         self.texto = self.plainTextEdit
-        print('Hello')
         varia = self.plainTextEdit
-        print('aopa')
-        print(varia)
-        print(self.texto.toPlainText())  # esse sai elas separado
-        print('oi')
-        print(self.texto.toPlainText().splitlines())
         minha_lista = self.texto.toPlainText().splitlines()
-        print(minha_lista)
-        print(f'Oi lindao {minha_lista[0]}')
         quantos_ids = len(self.texto.toPlainText().splitlines())
-        print(quantos_ids)
         for ids in minha_lista:
             print(ids)
             if ids in minha_lista[0]:
@@ -1080,7 +1070,6 @@ class Ui_Serial(object):
         consultando_id2 = tuple((tabela.loc[tabela['Mes-e-ano'] == cidade, mes_e_ano]))
         consultando_id_numero2 = str(consultando_id2[0])
         consultando_id_numero2 = str(consultando_id2[0])
-        print('Hellooo')
         print(consultando_id_numero2)
         if len(consultando_id_numero2) < 2:
             consultando_id_numero2 = '0' + consultando_id_numero2
