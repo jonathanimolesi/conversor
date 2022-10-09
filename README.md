@@ -11,11 +11,11 @@ https://github.com/quarckster/nmf_to_wav
 
 A consulta é feita através de escolha por mês e ano que necessito, utilizando uma planilha externa via pandas.
 
-Rápida descrição do objetivo de fazer esse projeto
+
 
 | :placard: Vitrine.Dev |     |
 | -------------  | --- |
-| :sparkles: Nome        | **Titulo do meu projeto**
+| :sparkles: Nome        | **Conversor para URA de áudios nmf/wav para mp3 ou wav. Consulta sql dos id's das ligações**
 | :label: Tecnologias | python
 
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
